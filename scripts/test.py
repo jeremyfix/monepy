@@ -8,8 +8,7 @@ import datetime
 import os
 
 
-os.system("cp example.db example2.db")
-DB.open('example2.db')
+DB.open('example.db')
 
 #### Add some counters
 elec = Counter("Electricité")

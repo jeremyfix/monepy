@@ -18,6 +18,6 @@ As an example, with two counters, it looks like this :
 
 This is not yet compatible with Python3, at least because the interface of PyQt4 changed (QStringList unavailable)
 
-
+This is also not yet out of the box ; I created the database with setup_db.py ; Actually, there is not yet anything in the GUI to add a new counter; The GUI however is generic in the sense that it displays as many tabs as there are declared counters in the database. 
 
 
