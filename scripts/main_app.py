@@ -29,6 +29,7 @@ from counter import Counter
 from recording import Recording
 from registerDialog import RegisterDialog
 
+version = "1.0.0"
 
 class MainWindow(QMainWindow):
     
@@ -61,6 +62,8 @@ class MainWindow(QMainWindow):
 
         fileMenu.addAction(registerAction)
         fileMenu.addAction(exitAction)
+
+        self.setWindowTitle("Monepy - v %s" % version)
 
     def setupTabs(self):
         #self.tabs.currentChanged.disconnect(self.currentTabChanged)
