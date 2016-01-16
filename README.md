@@ -3,7 +3,8 @@
 This is a simple GUI to record and plot the evolution of your energy consumption; To use it , simply call :
 
 ```
-python scripts/main_app.py
+cd scripts
+python main_app.py
 ```
 
 Requirements : sqlite3, PyQt4 and matplotlib.
