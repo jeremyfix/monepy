@@ -81,28 +81,28 @@ class MainWindow(QMainWindow):
 
             tw = QTableWidget(len(recordings), 5)
             self.tables["%i"%c.id] = tw
-            column_names = QtCore.QStringList(["Id","Counter", "Date", "Value", "Remove ?"])
+            column_names = ("Id","Counter", "Date", "Value", "Remove ?")
             tw.setHorizontalHeaderLabels(column_names)
 
             # Fill the table with the recordings
             for i, r in enumerate(recordings):
                 # The id of the recording in the table of recordings
-                item = QTableWidgetItem(QtCore.QString.number(r.id))
+                item = QTableWidgetItem("{}".format(r.id))
                 item.setFlags(QtCore.Qt.NoItemFlags)
                 tw.setItem (i, 0, item)
                 
                 # The id of the associated counter
-                item = QTableWidgetItem(QtCore.QString.number(r.idcounter))
+                item = QTableWidgetItem("{}".format(r.idcounter))
                 item.setFlags(QtCore.Qt.NoItemFlags)
                 tw.setItem (i, 1, item)
 
                 # The date when the recording has been made
-                item = QTableWidgetItem(QtCore.QString(r.date.strftime("%Y-%m-%d %H:%M:%S")))
+                item = QTableWidgetItem(r.date.strftime("%Y-%m-%d %H:%M:%S"))
                 item.setFlags(QtCore.Qt.NoItemFlags)
                 tw.setItem (i, 2, item)
 
                 # The value can be edited
-                item = QTableWidgetItem(QtCore.QString.number(r.value))
+                item = QTableWidgetItem("{}".format(r.value))
                 item.setFlags(QtCore.Qt.ItemIsEditable | QtCore.Qt.ItemIsEnabled)
 
                 tw.setItem (i, 3, item)
